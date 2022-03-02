@@ -12,3 +12,6 @@ class Event(models.Model):
 
     class Meta:
         db_table = "event"
+
+    def get_event_date(self):
+        return self.event_date.strftime('%d/%m/%Y %H:%M')
